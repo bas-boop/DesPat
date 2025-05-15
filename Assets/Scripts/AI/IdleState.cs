@@ -7,12 +7,12 @@ namespace AI
     {
         public override void DoEnter()
         {
-            Debug.Log("Started doing nothing");
+            Debug.Log($"Started {sharedData.Get<string>("name")} doing nothing");
         }
 
         public override void DoExit()
         {
-            Debug.Log("Stopped doing nothing");
+            Debug.Log($"Stopped {sharedData.Get<string>("name")} doing nothing");
         }
 
         public override void DoUpdate()

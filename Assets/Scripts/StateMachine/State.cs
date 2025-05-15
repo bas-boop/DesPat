@@ -2,6 +2,7 @@
 {
     public abstract class State
     {
+        public SM owner;
         public bool isInit;
         public DictWrapper sharedData;
         

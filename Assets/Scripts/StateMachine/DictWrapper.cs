@@ -14,6 +14,6 @@ namespace StateMachine
             return default;
         }
 
-        public void Set<T>( string key, T value ) => _data[key] = value;
+        public void Set<T>(string key, T value) => _data[key] = value;
     }
 }

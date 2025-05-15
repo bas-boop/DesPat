@@ -4,6 +4,7 @@
     {
         DEFAULT,
         TIME,
-        GAME_END
+        GAME_END,
+        MOVE_MOMENT
     }
 }
