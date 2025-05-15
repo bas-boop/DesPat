@@ -1,4 +1,7 @@
-﻿using StateMachine;
+﻿using Event;
+using StateMachine;
+using UnityEngine;
+using EventType = Event.EventType;
 
 namespace AI
 {
@@ -8,8 +11,15 @@ namespace AI
 
         private string _name;
         private int _startCamera;
+        private int _currentCamera;
         private int _respawnCamera;
         private int _level;
+        private int[] _path;
+
+        public void Start()
+        {
+            EventManager.AddListener(EventType.TIME, () => Debug.Log("Ar ar ar ar"));
+        }
         
         public class AnimatronicBuilder
         {
@@ -36,6 +46,12 @@ namespace AI
             public AnimatronicBuilder SetLevel(int level)
             {
                 _animatronic._level = level;
+                return this;
+            }
+
+            public AnimatronicBuilder SetPath(int[] path)
+            {
+                _animatronic._path = path;
                 return this;
             }
 
